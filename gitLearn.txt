@@ -1,0 +1,69 @@
+1、什么是git
+	版本控制工具：git & svn;
+远程的仓库：
+github.com、码云、oschina
+
+
+2、仓库：
+	本地--仓库--自己查看
+	远程--仓库--github、oschina--远程代码托管仓库
+	--开源社区
+3、
+github————开源社区
+www.githup.com
+
+3.5git 基本操作
+touch xxx.txt 新建TXT文件
+mkdir xxx 新建一个文件夹
+ 
+rm xxx.txt 删除txt文件
+rm -d xxx 删除一个文件夹
+
+echo "xxx">>xxx.txt输出内容到文件
+git init --初始化一个本地仓库(本地文件夹会生成一个隐藏的.git文件)
+
+cat xxx.txt 将文件内容作为标准输出
+
+3.6 全局配置git
+3.6.1对本机进行授权：
+ssh-keygen -t rsa -C"zhaopa6@126.com"
+
+远程github账号 授权：
+url：github.com/login----登录界面
+打开C盘 用户文件夹 找到.ssh文件夹找到rsa_pub
+文件.使用代码编辑器打开，
+ctrl+a ctrl+c
+进入 github setting --> ssh and GPG keys 
+选择add ssh key；
+
+配置全局用户名：
+git config --global user.name"ZhaoPaN9"
+配置全局的邮箱
+git config --global user.email""
+验证
+ssh -T git@github.com
+
+3.7.1 
+git 界面git init 保存当前文件夹存在.git文件夹
+3.7.2 创建一个文件或者复制文件到此文件夹使用
+git add .
+或者是
+git add --all
+提交当前仓库里的所有文件
+git add 1.txt  ---提交一个文件
+3.7.3
+git commit -m "提交的注释"
+3.7.4
+git remote add origin git@github.com:xxx/xxx.git
+origin 后面为 仓库的地址 github 仓库里面复制
+3.7.5
+git push -u origin master 推送到远程仓库
+3.7.6以上是第一次链接远程仓库必须按步骤
+3.7.7第二次提交git add . 
+git commit -m "第二次提交"
+git push
+
+
+
+
+
